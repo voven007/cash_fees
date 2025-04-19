@@ -3,7 +3,7 @@ from pathlib import Path
 
 # from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # load_dotenv(dotenv_path='.docker/envfiles/.env')
 
@@ -16,10 +16,7 @@ DEBUG = 'True'
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split()
 ALLOWED_HOSTS = []
 
-# CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split()
-
-
-# Application definition
+# AUTH_USER_MODEL = 'users.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -28,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api.apps.ApiConfig',
     'users.apps.UsersConfig',
     'payment.apps.PaymentConfig',
     'collect.apps.CollectConfig',
