@@ -16,7 +16,7 @@ DEBUG = 'True'
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split()
 ALLOWED_HOSTS = []
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
