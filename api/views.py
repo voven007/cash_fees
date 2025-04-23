@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from djoser.views import UserViewSet
+from rest_framework import viewsets
 
-# Create your views here.
+from collect.models import User
+
+class CollectUserViewSet(UserViewSet):
+    pass
+
+class PaymentViewSet(viewsets.ModelViewSet):
+    pass
+
+class CollectViewSet(viewsets.ModelViewSet):
+    pass

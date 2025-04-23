@@ -29,6 +29,11 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'payment.apps.PaymentConfig',
     'collect.apps.CollectConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
+    # 'rest_framework_swagger',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +112,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'collected_static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

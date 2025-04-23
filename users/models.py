@@ -13,10 +13,10 @@ class User(AbstractUser):
         max_length=60,
         blank=True)
 
-    # class Meta:
-    #     veerbose_name = 'Пользователь'
-    #     veerbose_name_plural = 'Пользователи'
-    #     ordering = ('username',)
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+        ordering = ('username',)
 
     def __str__(self):
         return f'{self.username}'
